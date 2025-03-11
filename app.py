@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import requests
 import tensorflow as tf
 import numpy as np
@@ -17,6 +18,15 @@ model = tf.keras.models.load_model("multi_class_satellite_model.h5")
 class_names = ["Forest", "Pasture", "River", "AnnualCrop", "Industrial", "SeaLake"]
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Replace "*" with a specific domain later
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 # Download satellite image from Mapbox API
 def get_satellite_image(north, south, east, west, zoom):
