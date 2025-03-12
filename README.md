@@ -6,7 +6,7 @@ The API is powered by a Convolutional Neural Network (CNN) trained on a multi-cl
 
 The repository for the frontend can be found here: https://github.com/asmerdon/satellite-classifier-frontend
 
-**Working live at: ** https://asmerdon.github.io/satellite-classifier-frontend/
+**Working live at** https://asmerdon.github.io/satellite-classifier-frontend/
 
 ## Model Overview
 The model was trained on the ["Trees in Satellite Imagery"](https://www.kaggle.com/datasets/mcagriaksoy/trees-in-satellite-imagery) dataset available on Kaggle. The dataset includes labeled images for six classes:
